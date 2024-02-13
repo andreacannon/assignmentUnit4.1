@@ -42,28 +42,47 @@ addNumbers();
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
-function isPositive(number) {
-  if (number > 0) {
-    return;
+  function isPositive(number) {
+  return number > 0;
+  isPositive(-3);
   }
-  return;
-}
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
+  console.log('isPositive - should say true', isPositive(3));
+  console.log('isPositive - should say false', isPositive(0));
+  console.log('isPositive - should say false', isPositive(-3));
 
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast(array) {
-
-}
+  function getLast(arr) {
+  if (arr.length === 0) {
+    return undefined;
+  } else {
+    return arr[arr.length - 1];
+  }
+  }
+  const emptyArray = [];
+  const lastItemEmpty = getLast(emptyArray);
+  console.log(lastItemEmpty); 
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
+  function find(value, array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return true;
+    }
+  }
+  return false;
+  }
 
-}
+let myArray = [ 7, 9, 11, 13, 15];
+console.log(find(3, myArray)); // true  
+console.log(find(5, myArray)); // true
+console.log(find(4, myArray)); // false
+
 
 // ----------------------
 // Stretch Goals
