@@ -15,7 +15,7 @@ console.log('***** Function Practice *****');
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
   function helloName(name) {
-  return "Hello, " + name + "!";
+  return "Hello, " , name, "!";
 }
 
 let personName = "Andrea";
