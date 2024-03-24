@@ -10,12 +10,11 @@ console.log('***** Function Practice *****');
 }
 // Call the function to test
   console.log('Test - should say "Hello World!"', hello());
-  hello();
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
   function helloName(name) {
-  return "Hello, " , name, "!";
+    return `Hello, ${name}!`;
 }
 
 let personName = "Andrea";
@@ -25,20 +24,17 @@ console.log(greeting);
 helloName();
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
   // return firstNumber + secondNumber;
-}
 function addNumbers(num1, num2) {
   return num1 + num2;
 }
-addNumbers();
+console.log(addNumbers(2,3));
 
 // 4. Function to multiply three numbers & return the result
   function multiplyThree(num1,num2,num3) {
   return num1 * num2 * num3;
   }
-  multiplyThree();
-
+console.log(  multiplyThree(3,3,3) );
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -52,7 +48,6 @@ addNumbers();
   console.log('isPositive - should say false', isPositive(0));
   console.log('isPositive - should say false', isPositive(-3));
 
-
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
   function getLast(arr) {
@@ -62,7 +57,7 @@ addNumbers();
     return arr[arr.length - 1];
   }
   }
-  const emptyArray = [];
+  const emptyArray = ['bob', 'jenny'];
   const lastItemEmpty = getLast(emptyArray);
   console.log(lastItemEmpty); 
 
@@ -77,12 +72,10 @@ addNumbers();
   }
   return false;
   }
-
 let myArray = [ 7, 9, 11, 13, 15];
 console.log(find(3, myArray)); // true  
 console.log(find(5, myArray)); // true
 console.log(find(4, myArray)); // false
-
 
 // ----------------------
 // Stretch Goals
